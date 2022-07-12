@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy</title>
+</head>
+<body>
+
+    <script>
+        // create an array of 3 students with last name, first name and age
+        var students = [
+            {
+                lastName: 'Doe',
+                firstName: 'John',
+                age: 20
+            },
+            {
+                lastName: 'Doe',
+                firstName: 'Jane',
+                age: 21
+            },
+            {
+                lastName: 'Doe',
+                firstName: 'Jack',
+                age: 22
+            }
+        ];
+
+        // loop through the array and print out the students' full name and age
+        // output: "Hello, my name is John Doe and I am 20 years old"
+        for (var i = 0; i < students.length; i++) {
+            console.log('Hello, my name is ' + students[i].firstName + ' ' + students[i].lastName + ' and I am ' + students[i].age + ' years old');
+        }
+    </script>
+</body>
+</html>

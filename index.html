@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+<h1>The Recipe Card</h1>
+
+<h2>Never forget another recipe!</h2>
+
+<form>
+
+<table>
+
+<tr><td align="center">
+
+Recipe Name: <input type="text" name="title" id="title"><br>
+
+</td></tr>
+
+<tr><td align="center">
+
+Servings: <input type="text" name="servings" id="servings"><br>
+
+</td></tr>
+
+<tr><td align="center">
+
+Ingredients: <input type="textarea" name="ingredients" id="ingredients"> <br>(Insert Comma separated data in Ingredients)<br>
+
+</td></tr>
+
+<tr><td align="center">
+
+<button onclick="myRecipe()">Generate Recipe</button>
+
+</td></tr>
+
+</table>
+
+</form>
+
+<script>
+
+function myRecipe()
+
+{
+
+//I have provided two different object creation and display the data in console.log as the requirement was not quite clear to me. Please use the way you want and can remove the other one.
+
+//Create a java scrip object to hold data from html inputs and display in console.log
+
+var recipeFromHTML = new Object();
+
+recipeFromHTML.title=document.getElementById("title").value;
+
+recipeFromHTML.servings=document.getElementById("servings").value;
+
+recipeFromHTML.ingredients=document.getElementById("ingredients").value;
+
+ingrd = recipeFromHTML.ingredients.split(",");
+
+console.log(" --- First Object ----")
+
+console.log(recipeFromHTML.title);
+
+console.log("Serves: "+recipeFromHTML.servings);
+
+console.log("Ingredients: ");
+
+for (a in ingrd ) {
+
+console.log(ingrd[a]);
+
+}
+
+//Below is an example of hardcoded javascript object.
+
+console.log(" --- Second Object ----")
+
+var recipeHardcoded = Object.defineProperties({}, {
+
+title: { value: "Mole" },
+
+servings: { value: 2 },
+
+Ingredients: { value: [ "cinnamon", "cumin", "cocoa" ] }
+
+});
+
+console.log(recipeHardcoded.title);
+
+console.log("Serves: "+recipeHardcoded.servings);
+
+console.log("Ingredients: ");
+
+for (a in recipeHardcoded.Ingredients ) {
+
+console.log(recipeHardcoded.Ingredients[a]);
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
